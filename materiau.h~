@@ -1,0 +1,12 @@
+#ifndef DEF_VITESSE
+#define DEF_VITESSE
+
+#include <string>
+
+class vitesse
+{
+ public:
+  
+  
+
+}

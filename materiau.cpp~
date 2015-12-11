@@ -1,0 +1,20 @@
+class materiau
+{
+public:
+  double vitesseLongi(double elastique[3], int type)
+  {
+  }
+
+  double vitesseTrans(double elastique[3], int type)
+  {
+  }
+  
+private:
+  double m_rho;
+  double m_young;
+  double m_poisson;
+  double m_C11;
+  double m_C14;
+  double m_lambda;
+  double m_mu;
+}

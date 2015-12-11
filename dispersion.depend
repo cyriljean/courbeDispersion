@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1449852141 source:/home/cyril/Documents/c++/dispersion/main.cpp
+	"materiau.h"
+	"vecteurOnde.h"
+	<cmath>
+	<iostream>
+	<string>
+	<fstream>
+	<stdio.h>
+	<gsl/gsl_sf_bessel.h>
+
+1449849174 /home/cyril/Documents/c++/dispersion/materiau.h
+
+1449849317 source:/home/cyril/Documents/c++/dispersion/materiau.cpp
+	<cmath>
+	"materiau.h"
+
+1449850214 /home/cyril/Documents/c++/dispersion/vecteurOnde.h
+	"materiau.h"
+
+1449850560 source:/home/cyril/Documents/c++/dispersion/vecteurOnde.cpp
+	<cmath>
+	"vecteurOnde.h"
+
+1449854636 source:/home/cyril/Documents/c++/dispersion/determinant.cpp
+	<stdio.h>
+	<gsl/gsl_sf_bessel.h>
+	"determinant.h"
+
+1449854590 /home/cyril/Documents/c++/dispersion/determinant.h
+

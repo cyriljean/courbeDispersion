@@ -1,16 +1,30 @@
-#include "math.h"
+#include "materiau.h"
+#include "determinant.h"
+#include <cmath>
 #include <iostream>
-using namespace std;
+#include <string>
+#include <fstream>
 
+using namespace std;
 
 int main()
 {
-    int a(2),b(2);
-    cout << "Valeur de a : " << a << endl;
-    cout << "Valeur de b : " << b << endl;
-    b = ajouteDeux(a);                     //Appel de la fonction
-    cout << "Valeur de a : " << a << endl;
-    cout << "Valeur de b : " << b << endl;
-    return 0;
+  materiau gold(19300,79e9,0.4);
+  determinant reduit(1.0245884585,0.01,gold.rho(),gold.young(),gold.poisson(),0,100);
 
+  cout << reduit.besseln() << endl;
+
+  // creation du materiau or
+  ofstream fichier("out.csv", ios::out | ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
+        if(fichier)
+        {
+                fichier << gold.vitesseTrans() << endl;
+                fichier << gold.vitesseLongi() << endl;
+                fichier << reduit.alpha() << endl;
+                fichier << reduit.beta();
+                fichier.close();
+        }
+        else
+                cerr << "Impossible d'ouvrir le fichier !" << endl;
+        return 0;
 }
